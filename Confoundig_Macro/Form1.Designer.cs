@@ -28,13 +28,273 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Message_Interval = new System.Windows.Forms.TextBox();
+            this.Dectet_Interval = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ScreenShot_checkbox = new System.Windows.Forms.CheckBox();
+            this.Image_checkbox = new System.Windows.Forms.CheckBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(600, 239);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(606, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 75);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "감지 영역 지정";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(606, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(182, 21);
+            this.textBox1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(606, 84);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(182, 21);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(616, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "오브젝트 감지값";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.파일ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(840, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "파일";
+            // 
+            // 파일ToolStripMenuItem
+            // 
+            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.파일ToolStripMenuItem.Text = "파일";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(113, 22);
+            this.toolStripMenuItem1.Text = "save_as";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(706, 250);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 75);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "간격 지정";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(616, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "유사도 수치";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(613, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "메세지 간격(ms 단위)";
+            // 
+            // Message_Interval
+            // 
+            this.Message_Interval.Location = new System.Drawing.Point(606, 176);
+            this.Message_Interval.Name = "Message_Interval";
+            this.Message_Interval.Size = new System.Drawing.Size(182, 21);
+            this.Message_Interval.TabIndex = 3;
+            // 
+            // Dectet_Interval
+            // 
+            this.Dectet_Interval.Location = new System.Drawing.Point(606, 129);
+            this.Dectet_Interval.Name = "Dectet_Interval";
+            this.Dectet_Interval.Size = new System.Drawing.Size(182, 21);
+            this.Dectet_Interval.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(613, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 12);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "탐지 간격(s 단위)";
+            // 
+            // ScreenShot_checkbox
+            // 
+            this.ScreenShot_checkbox.AutoSize = true;
+            this.ScreenShot_checkbox.Location = new System.Drawing.Point(606, 206);
+            this.ScreenShot_checkbox.Name = "ScreenShot_checkbox";
+            this.ScreenShot_checkbox.Size = new System.Drawing.Size(100, 16);
+            this.ScreenShot_checkbox.TabIndex = 8;
+            this.ScreenShot_checkbox.Text = "스크린샷 경로";
+            this.ScreenShot_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // Image_checkbox
+            // 
+            this.Image_checkbox.AutoSize = true;
+            this.Image_checkbox.Location = new System.Drawing.Point(606, 228);
+            this.Image_checkbox.Name = "Image_checkbox";
+            this.Image_checkbox.Size = new System.Drawing.Size(116, 16);
+            this.Image_checkbox.TabIndex = 8;
+            this.Image_checkbox.Text = "원본 이미지 지정";
+            this.Image_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 272);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(600, 241);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(606, 492);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(182, 21);
+            this.textBox3.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(726, 203);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(62, 21);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "up";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(726, 223);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(62, 21);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "down";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(794, 204);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(25, 21);
+            this.textBox4.TabIndex = 3;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(840, 557);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.Image_checkbox);
+            this.Controls.Add(this.ScreenShot_checkbox);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Dectet_Interval);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Message_Interval);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox Message_Interval;
+        public System.Windows.Forms.TextBox Dectet_Interval;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.CheckBox ScreenShot_checkbox;
+        public System.Windows.Forms.CheckBox Image_checkbox;
+        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.TextBox textBox4;
     }
 }
 
